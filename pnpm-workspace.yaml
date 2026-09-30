@@ -1,0 +1,7 @@
+# Single application; vetted native build dependencies.
+saveExact: true
+onlyBuiltDependencies:
+  - sharp
+  - esbuild
+  - workerd
+  - unrs-resolver

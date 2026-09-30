@@ -1,0 +1,45 @@
+{
+  "name": "ai-accountant",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=24.19.0 <25",
+    "pnpm": "10.34.5"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "test:watch": "playwright test --ui",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.worker.json",
+    "lint": "eslint . --max-warnings=0",
+    "build:site": "node scripts/build-site.mjs",
+    "db:migrate:site": "wrangler d1 migrations apply accountant-site-local --local",
+    "test": "node scripts/test-local.mjs",
+    "preview:site": "wrangler dev --ip 127.0.0.1 --port 8787 --local"
+  },
+  "dependencies": {
+    "better-auth": "1.7.6",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260930.2",
+    "@playwright/test": "1.63.0",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.19.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.6",
+    "postcss": "8.5.28",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "wrangler": "4.144.0"
+  }
+}
