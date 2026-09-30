@@ -1,0 +1,53 @@
+# Local environment and credentials; keep only a blank example.
+.env
+.env.*
+!.env.example
+.envrc
+.npmrc
+.netrc
+secrets/
+credentials/
+credentials*.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+*.secret
+secrets.*
+tokens/
+*.db
+*.sqlite
+*.sqlite3
+
+# Dependencies, builds and caches.
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+.pnpm-store/
+.cache/
+*.tsbuildinfo
+
+# Test output and logs.
+coverage/
+playwright-report/
+test-results/
+*.log
+
+# Local data and backups; SQL migrations remain trackable.
+/.local-data/
+/backups/
+*.dump
+*.sql.gz
+.DS_Store
+Thumbs.db
+
+# Worker local secrets and runtime state.
+.dev.vars
+.dev.vars.*
+.wrangler/
